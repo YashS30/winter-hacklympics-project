@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<!-- TODO: replace project name with actual project name-->
-<title>{% block title %}{% endblock %} - PROJECT NAME</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!--TODO: make navbar-->
-<nav class="navbar">
-	<!--TODO: replace with project name-->
-	<h1>PROJECT NAME</h1>
-	<ul>
-		<li><a href="{{url_for('home_page')}}">Home</a></li>
-		<li><a href="{{url_for('languages_page')}}">Languages</a></li>
-		<li><a href="{{url_for('login_page')}}">Login/Register</a></li>
-	</ul>
-</nav>
-<section class="content">
-	<header>{% block header %}{% endblock %}</header>
-	{% for message in get_flashed_messages() %}
-		<div class="flash">{{ message }}</div>
-	{% endfor %} {% block content %}{% endblock %}
-</section>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="intial-scale=1, width=device-width">
+		<!-- TODO: replace project name with actual project name-->
+		<title>{% block title %}{% endblock %} - PROJECT NAME</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!--TODO: make navbar-->
+		<nav class="navbar">
+			<!--TODO: replace with project name-->
+			<h1>PROJECT NAME</h1>
+			<ul>
+				<li><a href="{{url_for('home_page')}}">Home</a></li>
+				<li><a href="{{url_for('languages_page')}}">Languages</a></li>
+				<li><a href="{{url_for('login_page')}}">Login/Register</a></li>
+			</ul>
+		</nav>
+		<section class="content">
+			<header>{% block header %}{% endblock %}</header>
+			{% for message in get_flashed_messages() %}
+				<div class="flash">{{ message }}</div>
+			{% endfor %}
+			{% block content %}{% endblock %}
+		</section>
+	</body>
+</html>
