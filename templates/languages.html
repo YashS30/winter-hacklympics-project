@@ -6,37 +6,11 @@
 
 {% block content %}
   	<div class="language-list">
-		<div>
-			<h1>Python</h1>
-			<p>Description of Python language. Python is a modern language, used by data scientists.</p>
-		</div>
-		<div>
-			<h1>Java</h1>
-			<p>Description of Java language. Java used to be the most popular programming language.</p>
-		</div>
-		<div>
-			<h1>Javascript</h1>
-			<p>Description of javascript language. Javascript is the language of the web.</p>
-		</div>
-		<div>
-			<h1>C</h1>
-			<p>Description of C language. C is a low-level language.</p>
-		</div>
-		<div>
-			<h1>C++</h1>
-			<p>Description of C++ language. C++ is C with classes.</p>
-		</div>
-		<div>
-			<h1>C#</h1>
-			<p>Description of C#. C# is similar to java but is created by Microsoft.</p>
-		</div>
-		<div>
-			<h1>Haskell</h1>
-			<p>Description of Haskell. Haskell is a functional programming language.</p>
-		</div>
-		<div>
-			<h1>BASIC</h1>
-			<p>Description of BASIC. BASIC is a very old programming language.</p>
-		</div>
+		{% for language in languages %}
+			<div>
+				<h1>{{language.name}}</h1>
+				<p>{{language.description}}</p>
+			</div>
+		{% endfor %}
 	</div>
 {% endblock %}

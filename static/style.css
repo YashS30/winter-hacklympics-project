@@ -48,11 +48,12 @@ nav {
 }
 
 .page_header {
+	margin: 60px;
 	text-align: center;
+	font-size: larger;
 }
 
 .language-list {
-	margin-top: 100px;
 	width: 100%;
 	display: grid;
 	grid-gap: 20px;
@@ -94,5 +95,4 @@ nav {
 
 .language-list div p {
 	margin-top: 10px;
-	text-align: justify;
 }

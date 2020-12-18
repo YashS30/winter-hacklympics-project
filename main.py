@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
+from language_descriptions import languages
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def about_page():
 
 @app.route('/languages')
 def languages_page():
-	return render_template('languages.html')
+	return render_template('languages.html', languages=languages)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
