@@ -1,11 +1,11 @@
 * {
 	margin: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* NAVBAR STYLING */
 
 nav {
-	font-family: 'Montserrat', sans-serif;
 	color: white;
 	top: 0;
 	width: 100%;
@@ -44,4 +44,55 @@ nav {
 .content {
 	margin-top: 15px;
 	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.page_header {
+	text-align: center;
+}
+
+.language-list {
+	margin-top: 100px;
+	width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto;
+}
+
+@media only screen and (max-width: 1024px) {
+	.navbar ul {
+		width: 50%;
+	}
+
+	.language-list {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.language-list {
+		grid-template-columns: auto auto;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.language-list {
+		grid-template-columns: auto;
+	}
+}
+
+.language-list div {
+	background: #9987d6;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.language-list div h1 {
+	text-align: center;
+}
+
+.language-list div p {
+	margin-top: 10px;
+	text-align: justify;
 }
