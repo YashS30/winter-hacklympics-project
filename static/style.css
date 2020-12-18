@@ -2,6 +2,8 @@
 	margin: 0;
 }
 
+/* NAVBAR STYLING */
+
 nav {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
@@ -36,4 +38,10 @@ nav {
 .navbar a {
 	color: white;
 	text-decoration: none;
+}
+
+/* PAGE STYLING */
+.content {
+	margin-top: 15px;
+	margin-left: 15px;
 }

@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home_page():
 	return render_template('home.html')
 
+@app.route('/about')
+def about_page():
+	return render_template('about.html')
+
 @app.route('/languages')
 def languages_page():
 	return render_template('languages.html')
