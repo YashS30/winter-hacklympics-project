@@ -1,23 +1,36 @@
+* {
+	margin: 0;
+}
+
+nav {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	position: fixed;
+	background: #564787;
+}
+
 .navbar {
-	display: inline;
+	padding-left: 5%;
+	padding-right: 5%;
+	position: relative;
+	z-index: 4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: auto;
+	height: 65px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-}
-
-.navbar li {
-	color: white;
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 40%;
+	list-style: none;
 }
 
 .navbar a {
