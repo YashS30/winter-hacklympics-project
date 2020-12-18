@@ -2,11 +2,14 @@
 <!-- TODO: replace project name with actual project name-->
 <title>{% block title %}{% endblock %} - PROJECT NAME</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-<nav>
+<!--TODO: make navbar-->
+<nav class="navbar">
 	<!--TODO: replace with project name-->
 	<h1>PROJECT NAME</h1>
 	<ul>
-		<!--TODO: make navbar-->
+		<li><a href="{{url_for('home_page')}}">Home</a></li>
+		<li><a href="{{url_for('languages_page')}}">Languages</a></li>
+		<li><a href="{{url_for('login_page')}}">Login/Register</a></li>
 	</ul>
 </nav>
 <section class="content">
