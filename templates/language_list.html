@@ -4,13 +4,15 @@
 	<h1>{% block title %}Programming Languages{% endblock %}</h1>
 {% endblock %}
 
+<!-- TODO: Implement recommender -->
 {% block content %}
+	<p>Not sure what you want to learn? Try our recommender!</p>
   	<div class="language-list">
 		{% for language in languages %}
-			<div>
-				<h1>{{language.name}}</h1>
-				<p>{{language.description}}</p>
-			</div>
+			<a href="{{url_for('language_page', lang=language)}}">
+				<h1>{{language}}</h1>
+				<p>{{languages[language]['description']}}</p>
+			</a>
 		{% endfor %}
 	</div>
 {% endblock %}

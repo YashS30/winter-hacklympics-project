@@ -83,16 +83,18 @@ nav {
 	}
 }
 
-.language-list div {
+.language-list a {
 	background: #9987d6;
 	padding: 10px;
 	border-radius: 5px;
+	text-decoration: none;
+	color: black;
 }
 
-.language-list div h1 {
+.language-list a h1 {
 	text-align: center;
 }
 
-.language-list div p {
+.language-list a p {
 	margin-top: 10px;
 }
