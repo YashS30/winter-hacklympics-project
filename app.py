@@ -32,6 +32,10 @@ def language_page(lang):
 	else:
 		return redirect(url_for('home_page'))
 
+@app.route('/recommender')
+def recommender_page():
+	return render_template('recommender.html')
+
 
 if __name__ == "__main__":
 	app.run(debug=True)

@@ -6,7 +6,10 @@
 
 <!-- TODO: Implement recommender -->
 {% block content %}
-	<p>Not sure what you want to learn? Try our recommender!</p>
+	<div class="recommender_link">
+		<p class="recommender_prompt">Not sure what you want to learn? Try our recommender!</p>
+		<a class="recommender_button" href="{{ url_for('recommender_page') }}">Go to recommender</a>
+	</div>
   	<div class="language-list">
 		{% for language in languages %}
 			<a href="{{url_for('language_page', lang=language)}}">

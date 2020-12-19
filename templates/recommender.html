@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h1>Programming Language {% block title %}Recommender{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<input id="toggle-on" name="toggle" type="radio">
+<label for="toggle-on">On</label>
+<input id="toggle-off" name="toggle" type="radio">
+<label for="toggle-off">Off</label>
+{% endblock %}

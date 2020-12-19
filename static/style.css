@@ -54,33 +54,12 @@ nav {
 }
 
 .language-list {
+	margin-top: 20px;
 	width: 100%;
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: auto auto auto auto;
 	grid-template-rows: auto auto;
-}
-
-@media only screen and (max-width: 1024px) {
-	.navbar ul {
-		width: 50%;
-	}
-
-	.language-list {
-		grid-template-columns: auto auto auto;
-	}
-}
-
-@media only screen and (max-width: 580px) {
-	.language-list {
-		grid-template-columns: auto auto;
-	}
-}
-
-@media only screen and (max-width: 475px) {
-	.language-list {
-		grid-template-columns: auto;
-	}
 }
 
 .language-list a {
@@ -97,4 +76,71 @@ nav {
 
 .language-list a p {
 	margin-top: 10px;
+}
+
+.recommender_link {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.recommender_button {
+	background: #9987d6;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.navbar ul {
+		width: 50%;
+	}
+
+	.language-list {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.language-list {
+		grid-template-columns: auto auto;
+	}
+
+	.recommender_link {
+		flex-direction: column;
+	}
+
+	.recommender_prompt {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.language-list {
+		grid-template-columns: auto;
+	}
+}
+
+input[type='radio'] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+	padding: 10px 20px;
+	background-color: #9987d6;
+	border: none;
+	border-radius: 10px;
+	margin: 5px;
+	display: inline-block;
+}
+
+input[type='radio']:checked + label {
+	background-color: darkblue;
+	cursor: default;
+	color: #e6e6e6;
 }
