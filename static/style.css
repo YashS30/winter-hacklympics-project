@@ -1,6 +1,8 @@
 * {
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Fira Code', monospace;
+	background: #171060;
+	color: white;
 }
 
 /* NAVBAR STYLING */
@@ -16,7 +18,6 @@ nav {
 	width: 100%;
 	z-index: 99;
 	position: fixed;
-	background: #564787;
 }
 
 .navbar {
@@ -29,7 +30,10 @@ nav {
 	align-items: center;
 	width: auto;
 	height: 65px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 a {
+	font-family: 'Fira Code', monospace;
 }
 
 .navbar ul {
@@ -68,11 +72,13 @@ nav {
 }
 
 .language-list a {
-	background: #9987d6;
-	padding: 10px;
+	background: #171060;
+	padding: 20px;
 	border-radius: 5px;
+	border: 5px black;
+	box-shadow: 2px 2px 2px 3px black;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 .language-list a h1 {
@@ -91,11 +97,10 @@ nav {
 }
 
 .recommender_button {
-	background: #9987d6;
-	color: black;
 	font-weight: bold;
 	text-decoration: none;
 	border-radius: 5px;
+	box-shadow: 2px 2px 2px 3px black;
 	padding: 10px;
 }
 
@@ -106,6 +111,15 @@ form {
 	align-items: center;
 }
 
+/* TODO: NOT WORKING */
+.submit_button {
+	font-size: large;
+	background-color: #4b1b8b;
+	border-radius: 5px;
+	border: 2px solid black;
+	cursor: pointer;
+}
+
 input[type='radio'] {
 	display: none;
 }
@@ -114,32 +128,39 @@ label {
 	font-weight: bold;
 	cursor: pointer;
 	padding: 10px 20px;
-	background-color: #9987d6;
-	border: none;
+	border: 5px solid black;
 	border-radius: 10px;
 	margin: 5px;
 	display: inline-block;
 }
 
 input[type='radio']:checked + label {
-	background-color: darkblue;
+	background-color: #4b1b8b;
 	cursor: default;
-	color: #e6e6e6;
+	color: black;
+}
+
+@media only screen and (max-width: 1280px) {
+	.language-list {
+		grid-template-columns: auto auto auto;
+	}
 }
 
 @media only screen and (max-width: 1024px) {
 	.navbar ul {
 		width: 50%;
 	}
+}
 
+@media only screen and (max-width: 870px) {
 	.language-list {
-		grid-template-columns: auto auto auto;
+		grid-template-columns: auto auto;
 	}
 }
 
 @media only screen and (max-width: 580px) {
 	.language-list {
-		grid-template-columns: auto auto;
+		grid-template-columns: auto;
 	}
 
 	.recommender_link {

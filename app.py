@@ -29,7 +29,7 @@ def recommender_page():
 		return render_template('recommender.html')
 	else:
 		answers = []
-		for i in range(1, 7):
+		for i in range(1, 8):
 			try:
 				answers.append(request.form['question' + str(i)] == 'yes')
 			except:
@@ -53,6 +53,9 @@ def recommender_page():
 		elif answers[5]:
 			language = 'Javascript'
 			reason = 'Javascript is becoming increasingly popular at the backend because of a runtime called Node.js which is great for server side programming!'
+		elif answers[6]:
+			language = 'Java'
+			reason = 'Java is the most popular language for developing for Android. It is also used to develop for business applications.'
 		else:
 			language = 'Python'
 			reason = 'Python is the best language to learn for beginners due to its easy-to-read sytax and ease of setup!'
