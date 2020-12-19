@@ -19,7 +19,7 @@ def languages_page():
 def language_page(lang):
 	# Checks if the url language is in our list of languages
 	if lang in languages:
-		return render_template('language.html', language=lang, description=languages[lang]['description'])
+		return render_template('language.html', language=lang, description=languages[lang]['description'], resources=languages[lang]['resources'])
 	else:
 		return redirect(url_for('home_page'))
 
@@ -60,5 +60,5 @@ def recommender_page():
 		return render_template('form_submitted.html', language=language, reason=reason, description=languages[language]['description'])
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 	app.run(debug=True)

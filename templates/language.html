@@ -6,4 +6,12 @@
 
 {% block content %}
 	<p>{{description}}</p>
+	<br>
+	<h3>Resources for learning {{language}}:</h3>
+	<br>
+	<ul>
+		{% for resource in resources %}
+			<li><a href="{{resource}}">{{resource}}</a></li>
+		{% endfor %}
+	</ul>
 {% endblock %}
