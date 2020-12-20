@@ -180,6 +180,10 @@ input[type='radio']:checked + label {
 	.language-list {
 		grid-template-columns: auto auto auto;
 	}
+
+	.bio_grid {
+		width: 90%;
+	}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -201,6 +205,10 @@ input[type='radio']:checked + label {
 @media only screen and (max-width: 870px) {
 	.language-list {
 		grid-template-columns: auto auto;
+	}
+
+	.bio_grid {
+		grid-template-columns: auto;
 	}
 }
 
