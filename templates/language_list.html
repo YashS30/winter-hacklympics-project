@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h1>{% block title %}Programming Languages{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<div class="recommender_link">
+		<p class="recommender_prompt">Not sure what you want to learn? Try our recommender!</p>
+		<a class="recommender_button" href="{{ url_for('recommender_page') }}">Go to recommender</a>
+	</div>
+  	<div class="language-list">
+		{% for language in languages %}
+			<a href="{{url_for('language_page', lang=language)}}">
+				<h1>{{language}}</h1>
+				<p>{{languages[language]['description']}}</p>
+			</a>
+		{% endfor %}
+	</div>
+{% endblock %}

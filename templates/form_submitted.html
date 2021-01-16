@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h1>Programming Language {% block title%}Recommender{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<h3>The language we recommend you is {{language}}!</h3>
+	<p>Reason: {{reason}}</p>
+	<br>
+	<p>{{description}}</p>
+	<br>
+	<a href="{{ url_for('language_page', lang=language) }}">Go to language page for {{language}}!</a>
+{% endblock %}

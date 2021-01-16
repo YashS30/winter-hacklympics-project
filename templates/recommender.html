@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h1>Programming Language {% block title %}Recommender{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<form name="form" method="post">
+		<p>Would you like to develop websites?</p>
+		<div>
+			<input id="toggle-on" name="question1" type="radio" value="yes">
+			<label for="toggle-on">Yes</label>
+			<input id="toggle-off" name="question1" type="radio" value="no">
+			<label for="toggle-off">No</label>
+		</div>
+		<p>Are you interested in data science or machine learning?</p>
+		<div>
+			<input id="toggle2-on" name="question2" type="radio" value="yes">
+			<label for="toggle2-on">Yes</label>
+			<input id="toggle2-off" name="question2" type="radio" value="no">
+			<label for="toggle2-off">No</label>
+		</div>
+		<p>Are you interested in game programming?</p>
+		<div>
+			<input id="toggle3-on" name="question3" type="radio" value="yes">
+			<label for="toggle3-on">Yes</label>
+			<input id="toggle3-off" name="question3" type="radio" value="no">
+			<label for="toggle3-off">No</label>
+		</div>
+		<p>Would you like to write software for embedded systems, like Arduino?</p>
+		<div>
+			<input id="toggle4-on" name="question4" type="radio" value="yes">
+			<label for="toggle4-on">Yes</label>
+			<input id="toggle4-off" name="question4" type="radio" value="no">
+			<label for="toggle4-off">No</label>
+		</div>
+		<p>Would you like to develop desktop applications for windows?</p>
+		<div>
+			<input id="toggle5-on" name="question5" type="radio" value="yes">
+			<label for="toggle5-on">Yes</label>
+			<input id="toggle5-off" name="question5" type="radio" value="no">
+			<label for="toggle5-off">No</label>
+		</div>
+		<p>Would you like to develop on the backend, like database and server programming?</p>
+		<div>
+			<input id="toggle6-on" name="question6" type="radio" value="yes">
+			<label for="toggle6-on">Yes</label>
+			<input id="toggle6-off" name="question6" type="radio" value="no">
+			<label for="toggle6-off">No</label>
+		</div>
+		<p>Would you like to develop for Android or business applications?</p>
+		<div>
+			<input id="toggle7-on" name="question7" type="radio" value="yes">
+			<label for="toggle7-on">Yes</label>
+			<input id="toggle7-off" name="question7" type="radio" value="no">
+			<label for="toggle7-off">No</label>
+		</div>
+		<input class="submit_button" type="submit" value="Submit">
+	</form>
+{% endblock %}
